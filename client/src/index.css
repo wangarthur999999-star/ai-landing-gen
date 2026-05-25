@@ -2,11 +2,63 @@
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-bg: #050505;
+  --color-surface: #0a0a0a;
+  --color-border: #1a1a1a;
+  --color-gold: #d4a853;
+  --color-gold-dim: #8b7355;
+  --color-text: #f5f0e8;
+  --color-text-dim: #a09888;
+  --color-text-muted: #6b6560;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1a1a1a #050505;
 }
 
 body {
-  background: #171717;
-  color: #e4e4e7;
+  background: #050505;
+  color: #f5f0e8;
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(212, 168, 83, 0.25);
+  color: #f5f0e8;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4a853 0%, #f5d485 50%, #b8942e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 168, 83, 0.15);
+}
+
+.gold-glow {
+  box-shadow: 0 0 40px rgba(212, 168, 83, 0.06), 0 0 80px rgba(212, 168, 83, 0.03);
+}
+
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  border-color: rgba(212, 168, 83, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(212, 168, 83, 0.08);
+}
+
+.section-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 168, 83, 0.2), transparent);
 }

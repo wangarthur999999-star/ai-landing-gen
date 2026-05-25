@@ -3,10 +3,10 @@
 ## Profile Setup
 
 ### Title
-**AI-Native Full-Stack Developer | React · Node.js · TypeScript**
+**AI Native Developer | Multi-Agent Systems, Full-Stack AI, Production Automation**
 
 ### Hourly Rate
-$35/hr (start low to get first 3 reviews, then raise to $50-60)
+$120/hr (current — AI/ML senior tier)
 
 ### Bio / Overview
 ```
