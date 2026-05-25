@@ -1,8 +1,7 @@
 # Upwork — Active Listings & Proposal Templates
 
-> **Live Demo:** https://dry-walrus-74.loca.lt
-> localtunnel free tier — if tunnel dies: `cd ai-landing-gen && npx localtunnel --port 3001`
-> **Better:** Deploy to Render for a permanent URL. `render.yaml` is ready.
+> **Live Demo:** https://ai-landing-gen.onrender.com
+> Deployed on Render (Starter, $7/mo). Auto-deploys from `master` branch.
 
 ## LIVE Project Catalog (Zero Connects — Published May 25)
 
