@@ -1,6 +1,8 @@
 import express from 'express'
 import cors from 'cors'
 import rateLimit from 'express-rate-limit'
+import { existsSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { apiRouter } from './routes/api.js'
 import { rebuildIndex } from './store.js'
 
@@ -16,6 +18,22 @@ app.use('/api', rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
 }), apiRouter)
+
+// Serve built frontend in production
+const clientDist = join(import.meta.dirname, '..', '..', 'client', 'dist')
+if (existsSync(clientDist)) {
+  const indexHtml = readFileSync(join(clientDist, 'index.html'), 'utf-8')
+  // Serve static assets with SPA fallback
+  app.get('/{*splat}', (req, res) => {
+    const filePath = join(clientDist, req.path === '/' ? 'index.html' : req.path)
+    if (existsSync(filePath)) {
+      res.sendFile(filePath)
+      return
+    }
+    res.type('html').send(indexHtml)
+  })
+  console.log('Serving frontend from', clientDist)
+}
 
 await rebuildIndex()
 
