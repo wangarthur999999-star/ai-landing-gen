@@ -1,0 +1,31 @@
+{
+  "name": "ai-landing-gen-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dompurify": "^3.2.4",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "jsdom": "^26.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dompurify": "^3.2.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.14.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.3",
+    "typescript": "~5.7.2",
+    "vitest": "^3.1.1"
+  }
+}

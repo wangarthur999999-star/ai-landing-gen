@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><!-- SLOT: page_title --></title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #fafaf8; color: #1a1a1a; line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Source Serif 4', Georgia, serif; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 3rem); }
+  .hero {
+    padding: clamp(4rem, 12vw, 10rem) 0 clamp(3rem, 8vw, 6rem);
+    text-align: center; border-bottom: 1px solid #e5e5e0;
+  }
+  .kicker { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; color: #888; margin-bottom: 1.5rem; font-weight: 600; }
+  h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; }
+  .deck { font-size: 1.25rem; color: #555; max-width: 36rem; margin: 1.5rem auto 2.5rem; line-height: 1.6; }
+  .cta {
+    display: inline-block; border-bottom: 2px solid #1a1a1a; padding: 0.5rem 0;
+    font-size: 1rem; font-weight: 600; text-decoration: none; color: #1a1a1a;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .cta:hover { color: #555; border-color: #555; }
+  .section { padding: clamp(3rem, 8vw, 5rem) 0; }
+  .section h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 2.5rem; text-align: center; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+  .feature h3 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.75rem; }
+  .feature p { color: #555; font-size: 1.05rem; }
+  .divider { width: 100%; height: 1px; background: #e5e5e0; margin: 2rem 0; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+  .pricing-card { padding: 2.5rem 2rem; border: 1px solid #e5e5e0; text-align: center; }
+  .pricing-card h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+  .pricing-card .price { font-size: 2.5rem; font-weight: 700; font-family: 'Source Serif 4', serif; margin: 1rem 0; }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+  .testimonial p { font-size: 1.1rem; color: #444; font-style: italic; line-height: 1.7; }
+  .testimonial cite { display: block; margin-top: 1rem; font-weight: 600; font-style: normal; color: #1a1a1a; font-family: 'Inter', sans-serif; }
+  .bg-light { background: #f3f3ef; }
+  footer { padding: 3rem 0; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #e5e5e0; }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="container">
+    <div class="kicker"><!-- SLOT: kicker --></div>
+    <h1><!-- SLOT: hero_headline --></h1>
+    <p class="deck"><!-- SLOT: hero_subtitle --></p>
+    <a href="#" class="cta"><!-- SLOT: cta_text --></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2><!-- SLOT: features_section_title --></h2>
+    <div class="features-grid">
+      <div class="feature"><h3><!-- SLOT: feature_1_title --></h3><p><!-- SLOT: feature_1_desc --></p></div>
+      <div class="feature"><h3><!-- SLOT: feature_2_title --></h3><p><!-- SLOT: feature_2_desc --></p></div>
+      <div class="feature"><h3><!-- SLOT: feature_3_title --></h3><p><!-- SLOT: feature_3_desc --></p></div>
+      <div class="feature"><h3><!-- SLOT: feature_4_title --></h3><p><!-- SLOT: feature_4_desc --></p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider container"></div>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2><!-- SLOT: pricing_section_title --></h2>
+    <div class="pricing-grid">
+      <div class="pricing-card"><h3><!-- SLOT: plan_1_name --></h3><div class="price"><!-- SLOT: plan_1_price --></div><p style="color:#666"><!-- SLOT: plan_1_desc --></p></div>
+      <div class="pricing-card"><h3><!-- SLOT: plan_2_name --></h3><div class="price"><!-- SLOT: plan_2_price --></div><p style="color:#666"><!-- SLOT: plan_2_desc --></p></div>
+      <div class="pricing-card"><h3><!-- SLOT: plan_3_name --></h3><div class="price"><!-- SLOT: plan_3_price --></div><p style="color:#666"><!-- SLOT: plan_3_desc --></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2><!-- SLOT: testimonials_section_title --></h2>
+    <div class="testimonial-grid">
+      <div class="testimonial"><p><!-- SLOT: testimonial_1 --></p><cite><!-- SLOT: testimonial_1_author --></cite></div>
+      <div class="testimonial"><p><!-- SLOT: testimonial_2 --></p><cite><!-- SLOT: testimonial_2_author --></cite></div>
+      <div class="testimonial"><p><!-- SLOT: testimonial_3 --></p><cite><!-- SLOT: testimonial_3_author --></cite></div>
+    </div>
+  </div>
+</section>
+
+<footer class="container"><!-- SLOT: footer_text --></footer>
+</body>
+</html>

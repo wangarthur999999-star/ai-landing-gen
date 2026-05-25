@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-landing-gen
+    env: node
+    buildCommand: cd server && npm ci && npm run build
+    startCommand: cd server && node dist/index.js
+    envVars:
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: PORT
+        value: "3001"
