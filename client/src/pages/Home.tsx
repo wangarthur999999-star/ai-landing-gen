@@ -207,28 +207,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Landing Page Demo Showcase */}
+      <section className="px-6 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="section-line mb-12" />
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <p className="font-mono text-xs text-gold tracking-[0.2em] uppercase mb-3">Live Demos</p>
+              <h2 className="font-serif text-4xl font-semibold mb-2">AI-Generated Landing Pages</h2>
+              <p className="text-text-dim text-sm">Each page generated in under 30 seconds. No human edits.</p>
+            </div>
+            <Link
+              to="/demos"
+              className="font-mono text-sm text-gold hover:text-gold-dim transition-colors"
+            >
+              View All Demos →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { path: 'swiss', style: 'Swiss', name: 'FinTrack', desc: 'Personal finance SaaS app' },
+              { path: 'dark-luxury', style: 'Dark Luxury', name: 'CloudForge', desc: 'DevOps infrastructure platform' },
+              { path: 'neo-brutalism', style: 'Neo-brutalism', name: 'PawPal', desc: 'On-demand pet services app' },
+            ].map((demo) => (
+              <a
+                key={demo.path}
+                href={`/demo/${demo.path}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-surface border border-border rounded-xl overflow-hidden hover:border-gold/30 transition-colors"
+              >
+                <div className="aspect-video bg-bg/50 flex items-center justify-center border-b border-border overflow-hidden">
+                  <iframe
+                    src={`/demo/${demo.path}`}
+                    className="w-full h-full scale-[0.2] origin-top-left"
+                    style={{ width: '500%', height: '500%' }}
+                    sandbox=""
+                    title={demo.name}
+                  />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-text font-serif font-semibold">{demo.name}</p>
+                    <span className="text-[10px] font-mono text-gold bg-gold/10 px-2 py-0.5 rounded-full">{demo.style}</span>
+                  </div>
+                  <p className="text-xs text-text-dim mt-1">{demo.desc}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="px-6 py-24">
         <div className="max-w-2xl mx-auto text-center">
           <div className="gold-glow rounded-2xl bg-surface gold-border p-12">
             <p className="font-mono text-xs text-gold tracking-[0.2em] uppercase mb-4">Available for Work</p>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">
-              Let's build something
+              Your landing page,
               <br />
-              <span className="gold-gradient">AI-native</span> together
+              <span className="gold-gradient">shipped in 48 hours</span>
             </h2>
             <p className="text-text-dim text-sm leading-relaxed mb-8 max-w-md mx-auto">
-              I work with startups and agencies to build AI-powered products, automate workflows, and ship fast.
-              If you need AI that actually works in production — let's talk.
+              $500-1500 fixed price. 5 design styles. Real HTML/CSS, responsive, animation-ready.
+              I use AI tooling to deliver at 10x speed — no templates, no page builders.
             </p>
-            <a
-              href="mailto:hi@wanga.dev"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gold/10 border border-gold/25 text-gold
-                         font-mono text-sm rounded-lg hover:bg-gold/15 transition-colors"
-            >
-              hi@wanga.dev
-              <span className="text-gold-dim">→</span>
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="mailto:arthur.wang.dev@gmail.com"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gold/10 border border-gold/25 text-gold font-mono text-sm rounded-lg hover:bg-gold/15 transition-colors"
+              >
+                arthur.wang.dev@gmail.com
+              </a>
+              <a
+                href="https://contra.com/arthur_10_wang_kstf43x5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border text-text-dim font-mono text-sm rounded-lg hover:border-gold/25 hover:text-gold transition-colors"
+              >
+                Contra Portfolio →
+              </a>
+            </div>
           </div>
         </div>
       </section>
