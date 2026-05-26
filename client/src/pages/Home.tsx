@@ -230,6 +230,8 @@ export default function Home() {
               { path: 'swiss', style: 'Swiss', name: 'FinTrack', desc: 'Personal finance SaaS app' },
               { path: 'dark-luxury', style: 'Dark Luxury', name: 'CloudForge', desc: 'DevOps infrastructure platform' },
               { path: 'neo-brutalism', style: 'Neo-brutalism', name: 'PawPal', desc: 'On-demand pet services app' },
+              { path: 'glassmorphism', style: 'Glassmorphism', name: 'MindPilot', desc: 'Meditation & wellness app' },
+              { path: 'editorial', style: 'Editorial', name: 'The Long Read', desc: 'Long-form journalism platform' },
             ].map((demo) => (
               <a
                 key={demo.path}

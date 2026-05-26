@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindPilot â AI-Powered Meditation for Daily Clarity</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0c0c1d 0%, #a0a2e 30%, #16213e 60%, #0a1628 100%);
+    color: #e8e8f0; line-height: 1.6; min-height: 100vh;
+  }
+  .mesh-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(120, 80, 255, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 70% 60%, rgba(0, 180, 255, 0.25) 0%, transparent 50%),
+      radial-gradient(circle at 50% 90%, rgba(255, 80, 180, 0.2) 0%, transparent 50);
+  }
+  .content { position: relative; z-index: 1; }
+  .glass {
+   : rgba(255,255,255,0.06); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 24px;
+  }
+  .hero {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 90vh; padding: 2rem; text-align: center;
+  }
+  .hero-card {
+    padding: 4rem 3rem; max-width: 48rem;
+    background: rgba(255,255,255,0.05); backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 32px;
+  }
+ h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800;
+    background: linear-gradient(135deg, #c084fc 0%, #60a5fa 50%, #34d399 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; line-height: 1.1; margin-bottom: .5rem;
+  }
+  .hero-subtitle { font-size: 1.2rem; color: #aab; max-width: 32rem; margin: 0 auto 2rem; }
+  .cta {
+    display: inline-block; padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6); color: #fff;
+    border-radius: 100px; font-weight: 600; text-decoration: none;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .cta:hover { box-shadow: 0 0 60px rgba(139, 92, 246, 0.5); transform: translateY(-2px); }
+  .section { padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem); position: relative; z-index: 1; }
+  .section-title {
+    font-size: 2.rem; font-weight: 700; text-align: center; margin-bottom: 3rem;
+    background: linear-gradient(135deg #e2e8f0, #94a3b8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .feature-card { padding: 2rem; }
+  .feature-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+  .feature-card h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.75rem; color: #fff; }
+  .feature-card p { color: #99a; line-height: 1.7; }
+  .pricing-grid display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 64rem; margin: 0 auto; }
+  .price-card { padding 2.5rem; text-align: center; }
+  .price-card.popular { background: rgba(139, 92, 246, .15); border-color: rgba(139, 92, 246, 0.3); }
+  .price-card h3 { font-size: 1.2rem; color: #aab; margin-bottom: 1rem; }
+  .price-card .price { font-size: 3rem; font-weight: 800; margin: 1rem 0; color: #fff; }
+  .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .testimonial-card {: 2rem; }
+  .testimonial-card p { color: #bbc; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
+  .testimonial-card cite { color: #8b5cf6; font-weight: 600; }
+  footer { text-align: center; padding: 3rem 2rem; color: #556; font-size: 0.9rem; position: relative; z-index: 1; border-top: 1px solid rgba(255,255,255,0.06); }
+  @media (max-width: 768px) {
+    .hero-card { padding: 2rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="mesh-bg"></div>
+<div class="content">
+
+<section class="hero">
+  <div class="hero-card">
+    <h1>Your Personal AI Meditation Coach</h1>
+    <p class="hero-subtitle">MindPilot learns your mood, stress, and goals â then builds a daily session of guided audio, breathing exercises, and progress tracking that adapts to you.</p>
+    <a href="#" class="cta">Start Your Free Trial</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section">Designed Around You</h2>
+  <div class="features-grid">
+    <div class="feature-card glass"><h3>MoodâAware Sessions</h3><p>Tell MindPilot how you feel â anxious, tired, focused â and it instantly crafts a meditation that matches your emotional state.</p></div>
+    <div class="-card glass"><h3>Adaptive Breathing</h3><p> breathing exercises that adjust pace and pattern based on realâtime stress levels, helping you find calm faster.</p></div>
+    <div class="feature-card glass"><h3>GoalâDriven Progress</h3><p>Set targets like better sleep, sharper focus, or lower anxiety. MindPilot tracks your streaks and refines sessions to help you hit them.</p></div>
+    <div class="feature-card glass"><h3>Rich Guided Audio</h3><p>Experience professionally narrated meditations with immersive soundscapes â from forest mornings to ocean depths â all personalized for you.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Choose Your Path</h2>
+  <div class="pricing-grid">
+    <div class="price-card glass"><h3>Starter</h3><div class="price">$0</div><p style="color:#99a">3 personalized sessions per week, basic breathing exercises, and weekly progress summary.</p></div>
+    <div class="price-card glass popular"><h3>Premium</h3><div class="price">$12/mo</div><p style="color:#99a">Unlimited daily sessions, advanced stress tracking, full breathing library, and detailed insights.</p></div>
+    <div class="price-card glass"><h3>Family</h3><div class="price">$19/mo</div><p style="color:#99a">Up to 5 profiles, shared goal challenges, and familyâfriendly guided content for all ages.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Real People, Real Calm</h2>
+  <div class="testimonials">
+    <div class="testimonial-card glass"><p>âMindPilot understood my anxiety better than any app Iâve tried. Within a week my morning stress scores dropped by 40%.â</p><cite>â Elena Marquez, UX Designer</cite></div>
+    <div class="testimonial-card glass"><p>âI love that it adjusts the breathing exercises when it senses Iâm still tense. Itâs like having a therapist in my pocket.â</p><cite>â David Okonkwo, Software Engineer</cite></div>
+    <div class="testimonial-card glass"><p>âThe progress tracking keeps me accountable. Iâve meditated 67 days in a row â something I never thought Iâd do.â</p><cite>â Priya Sharma, Graduate Student</cite></div>
+  </div>
+</section>
+
+<footer>Â© 2025 MindPilot. All rights reserved. Your journey to clarity starts here.</footer>
+
+</div>
+</body>
+</html>

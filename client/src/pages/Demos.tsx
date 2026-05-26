@@ -22,6 +22,20 @@ const demos = [
     description: 'On-demand dog walking app. Bold, playful design that stands out in the consumer space.',
     tags: ['Consumer', 'Marketplace', 'B2C'],
   },
+  {
+    name: 'MindPilot — Mental Wellness',
+    path: 'glassmorphism',
+    style: 'Glassmorphism',
+    description: 'AI-powered meditation and wellness app. Modern frosted-glass design with soothing gradients.',
+    tags: ['Health', 'Consumer', 'B2C'],
+  },
+  {
+    name: 'The Long Read — Journalism',
+    path: 'editorial',
+    style: 'Editorial',
+    description: 'Curated long-form journalism platform. Elegant typography-first design for serious readers.',
+    tags: ['Media', 'Content', 'B2C'],
+  },
 ]
 
 export default function Demos() {
