@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CloudForge â Infrastructure as Code, Unified</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a; color: #d4af37;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1,2, h3 { font-family: 'Playfair Display', serif; }
+  .gold-line { width: 60px; height: 2px;: #d4af37; margin: 2rem 0; }
+  .hero {
+   -height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 2rem;
+    background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a70%);
+  }
+ .hero h1 { font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+  .hero p { font: 1.25rem; color: #999; max-width: 36rem; margin: 2rem auto; font-weight: 300; }
+  .cta {
+    display: inline-block; border: 1px solid #d4af37; color: #d4af37; padding: 1rem 3;
+    font-size: 0.875rem; text-decoration: none; letter-spacing: 0.15em; text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .cta:hover { background: #d4af37; color: #0a0a0a; }
+  .section { padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 8vw, 8rem); }
+  .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; color: #d4af37; margin-bottom: 1rem; }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; margin-top: 4rem; }
+  .feature-item { border-top: 1px solid #222; padding-top: 2rem; }
+  .feature-item h3 { font-size: 1.75rem; color: #fff; margin-bottom: 1rem; }
+  .feature-item p { color: #777; line-height: 1.8; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: #222; margin-top: 4rem; }
+  .price-card { background: #0a0a0a; padding: 3rem 2rem; text-align: center }
+  .price-card.featured { background: #111; }
+  .price-card h3 { color: #fff; font-size: 1.25rem; margin-bottom: 1.5; }
+  .price-card .amount { font-size: 3.5rem; font-weight: 900; font-family: 'Playfair Display', serif; }
+  .testimonial-grid { display: grid grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-top: 4rem; }
+  .testimonial-item { padding: 2rem; border: 1px solid #222; }
+  .testimonial-item p { color: #999; font-style: italic; line-height: 1.8; margin-bottom: 1.5rem; }
+  .testimonial-item cite { color: #d4af37; font-style: normal; font-weight: 500; }
+  footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid #222; color: #555; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div>
+    <h1>Provision. Monitor. Scale. From One Command.</h1>
+    <p>CloudForge unifies your cloud infrastructure into a single, code-driven dashboard. Define your stack once, deploy across AWS, Azure, and GCP â and never touch a console again.</p>
+    <a href="#" class="cta">Start Forging Free</a>
+  </>
+</section>
+
+<section class="section">
+  <div class="section-label">Core Capabilities</div  <h2 style="font-size: 3rem; font-weight: 700; color: #fff; line-height: 1.15;">Infrastructure as Code, Evolved</h2>
+  <div class="gold-line"></div>
+  <div class="features-grid">
+    <div class="feature-item"><h3>Declarative Provisioning</h3><p>Write YAML or HCL to define VPCs, clusters, databases, and serverless functions. CloudForge translates your blueprint into idempotent, parallel deployments across any cloud provider â no manual toggling or drift.</p></div>
+    <div class="feature-item"><h3>Real-Time Monitoring & Alerts</h3><p>See every resourceâs health, cost, and performance on a unified dashboard. Set granular alerts for CPU, memory, latency, and spend. Get notified via Slack, PagerDuty, or email before issues escalate.</p></div>
+    <div class="feature-item"><h3>Auto-Scaling & Cost Optimization</h3><p>Define scaling policies based on metrics or schedules. CloudForge automatically rightsizes instances, suggests reserved capacity, and identifies unused resources â saving teams an average of 34% on cloud bills.</p></div>
+  </div>
+</section>
+
+<section class="section" style="background: #050505;">
+  <div class="section-label">Pricing</div>
+  <h2 style="font-size: 3rem; font-weight: 700; color: #fff; line-height: 1.; text-align:;">Simple, Predictable Plans</h2>
+  <div class="gold-line" style="margin: 2rem auto;"></div>
+  <div class="pricing-grid">
+    <div class="price-card"><h3>Starter</h3><div class="amount">$0</div><p style="color:#666; margin-top:1rem">Up to 10 resources, 1 project, community support. Perfect for personal projects and small teams exploring IaC.</p></div>
+    <div class="price-card featured"><h3>Pro</h3>< class="amount">$99</div><p style="color:#666; margin-top:1rem">Unlimited resources, 5 projects, advanced monitoring, Slack alerts, and 99.9% uptime SLA. For growing engineering teams.</p></div>
+    <div class="price-card"><h3>Enterprise</h3><div class="amount">Custom</div><p style="color:#666; margin-top:1rem">Dedicated support, SSO, custom integrations, audit logs, and multi-cloud compliance. Designed for scale and security.</p></div>
+  </div>
+</section>
+
+<section class="">
+  <h2 style="font-size: 3rem; font-weight: 700; color: #fff; line-height: 1.15; text-align: center;">Trusted by DevOps Leaders</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-item"><p>"CloudForge cut our provisioning time from hours to minutes. The unified dashboard gave us visibility we never had across three cloud providers. Itâs become our single source of truth for infrastructure."</p><cite>â Elena V., Platform Engineering Lead at Nextera Robotics</cite></div>
+    <div class="testimonial-item"><p>"We reduced our monthly cloud spend by 28% in the first quarter using CloudForgeâs auto-scaling and cost recommendations. The monitoring saved us from a major outage during a Black Friday surge."</p><cite>â Marcus T., CTO at BrightCommerce</cite></div>
+  </div>
+</section>
+
+<footer>Â© 2025 CloudForge, Inc. â Infrastructure as Code, Unified.</footer>
+</body>
+</html>

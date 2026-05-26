@@ -20,10 +20,10 @@ app.use('/api', rateLimit({
 }), apiRouter)
 
 // Serve demo pages
-const generatedDir = join(import.meta.dirname, '..', 'generated')
+const demosDir = join(import.meta.dirname, '..', 'demos')
 app.get('/demo/:name', (req, res) => {
   const name = String(req.params.name).replace(/[^a-z0-9-]/gi, '')
-  const demoPath = join(generatedDir, `demo-${name}.html`)
+  const demoPath = join(demosDir, `demo-${name}.html`)
   if (existsSync(demoPath)) {
     res.type('html').send(readFileSync(demoPath, 'utf-8'))
     return

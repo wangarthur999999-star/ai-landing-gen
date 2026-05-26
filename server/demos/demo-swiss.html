@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinTrack â AI-Powered Personal Finance App</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fff; color: #111; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .grid { display: grid; grid-template-columns 1fr 1fr; min-height: 100vh; }
+  .hero-text {
+    padding: clamp(3rem, 8vw, 8rem) clamp(2rem,6vw, 6rem);
+    display: flex; flex-direction: column; justify-content: center;
+    background: #fff;
+  }
+  .hero-visual {
+    background: #e11d48; display: flex; align-items: center; justify-content: center;
+    padding: 3rem;
+  }
+  .hero-visual .brand-mark { font-size: clamp(6rem, 12vw, 16rem); font-weight: 900; color: #fff; }
+  h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  .subtitle { font-size: 1.25rem; color: #555; margin-bottom 2rem; max-width: 32rem; }
+  .cta {
+    display: inline-block; background: #111; color: #fff; padding: 1rem 2.5rem;
+    font-size: 1rem; font-weight: 600; text-decoration: none; letter-spacing: 0.02em;
+    transition: background 0.2s;
+  }
+  .cta:hover { background: #e11d48; }
+  .section { padding: clamp(3rem, 8vw, 6rem) clamp(2rem, 6vw, 6rem); }
+  .section-dark { background: #111; color: #fff; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+  .feature h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .feature p { color: #666; line-height: 1.7; }
+  .section-dark .feature p { color: #999; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .pricing-card { border: 2px solid #e5e5e5; padding: 2.5rem; }
+  .pricing-card.featured { border-color: #e11d48; }
+  .pricing-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .pricing-card .price { font-size: 3rem; font-weight: 900; margin: 1rem 0; }
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+  .testimonial { border-left: 4px solid #e11d48; padding-left: 1.5rem; }
+  .testimonial blockquote { font-size: 1.125rem; font-style: italic; color: #444; margin-bottom: 1rem; }
+  .testimonial cite { font-weight: 600; font-style: normal;: #111; }
+  { padding: 3rem; text-align: center; color: #999; font-size: 0.875rem; border-top: 1px solid #e5e5e5; }
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero-visual { min-height: 50vh; }
+  }
+</style>
+head>
+<body>
+<div="grid">
+  <div class="hero-text">
+    <h1>Your Money, Intelligently Managed.</h1>
+    <p class="subtitle">FinTrack uses AI to automatically categorize every expense, track your investments, and project your monthly savings â so you can focus on what matters.</p>
+    <div><a href="#" class="cta">Start Your Free Trial</a></div>
+  </div>
+  <div class="hero-visual">
+    <div class="brand-mark">F</div>
+  </div>
+</>
+
+<section class="section">
+  <h2 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 3rem;-spacing: -0.02em;">Everything You Need to Master Your Finances</h2>
+  <div class="features">
+    <div class="feature"><h3>AI Expense Categorization</h3><p>Our learning engine automatically sorts every transaction into 40+ categories like groceries, dining, subscriptions, and utilities â no manual tagging required.</p></>
+    <div class="feature"><h3>Investment Tracking</h3><p>Connect your brokerage accounts and FinTrack pulls real-time data on stocks, ETFs, crypto, and more. See your portfolio performance and asset allocation at a glance.</p></div>
+    <div class="feature"><h3>Smart Savings Projections</h3><>Based on your spending patterns and income, FinTrack forecasts your savings for the next 1, 3, and 12 months â helping you set realistic goals and stay on track.</p></div>
+    <div class="feature"><h3>Personalized Insights</h3><p>Receive weekly AI-generated reports that highlight unusual spending, suggest budget adjustments, and identify opportunities to save more without sacrificing lifestyle.</p></div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <h2="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; letter-spacing: -0.02em;">Simple Pricing, Powerful Value</h2>
+  <p style="color: #999; margin-bottom: 2rem;">Choose the plan that fits your financial journey. No hidden fees, cancel anytime.</p>
+  <div class="pricing-grid">
+    <div class="pricing-card"><h3>Starter</h3><div class="price">$0</div>< style="color:#666">Basic expense tracking and monthly summaries. Perfect for getting started with your finances.</p></div>
+    <div class="pricing-card featured"><h3>Pro</h3><div class="price">$9.99</div><p style="color:#666">Full AI categorization, investment tracking, savings projections, and personalized insights. Most popular.</p></div>
+    <div class="pricing-card"><h3>Family</h3><div class="price">$14.99</div>< style="color:#666">All Pro features for up to 5 family members. Shared budgets, joint accounts, and consolidated reports.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="font-size: 2.rem; font-weight: 900; margin-bottom: 3rem; letter-spacing: -0.02em;">Loved by Thousands of Savers</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial"><blockquote>âFinTrack completely changed how I view my money. The AI categories are eerily accurate â I discovered I was spending $400 a month on coffee runs. Now Iâm saving $200 more each month.â</blockquote><cite>â Sarah K., Marketing Manager, Austin TX</cite></div>
+    <div class="testimonial"><quote>âI used to dread budgeting. FinTrack makes it effortless. The investment tracking alone is worth the Pro subscription â I finally see how my 401(k) and crypto portfolio work together.â</blockquote><cite>â David L., Software Engineer, Seattle WA</cite></div>
+    <div class="testimonial"><blockquote>âMy wife and I share a Family plan. We love the joint savings projections â it helped us plan our down payment for a house. Weâre closing next month!â</blockquote><cite>â Priya &amp; Rohan M., Teachers, Chicago IL</cite></div>
+  </div>
+</section>
+
+<footer>
+  <p>Â© 2025 FinTrack. All rights reserved. Built with â¤ï¸ for smarter money management.</p>
+</footer>
+</body>
+</html>

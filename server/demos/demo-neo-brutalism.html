@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PawPal - On-Demand Dog Walking & Pet Sitting</title>
+<style>
+  *, *::, *::after {-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --yellow: #ffed00; --pink: #ff2d78; --cyan: #00e5ff; --purple:7c3aed;
+    --bg: #f8f8f0; --text: #1a1a1a;
+  }
+  body {
+    font-family: 'Inter 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .hero {
+    padding: 6rem 2rem;-align: center;
+    background: var(--yellow);
+    border-bottom: 6px solid #1a1a1a;
+  }
+  h1 { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; line-height: 1; text-transform: uppercase; letter-spacing: -0.03em; }
+  .badge {
+    display: inline-block; background: #1a1a1a; color: var(--yellow); padding: 0.5rem 1.5rem;
+    font-weight: 700; font-size: 0.875rem; text-transform: uppercase; margin-bottom: 2rem;
+    box-shadow: 4px 4px 0 #666;
+  }
+  .cta {
+    display: inline-block; background: var(--pink); color: #fff; padding: 1.25rem 3rem;
+    font-size: 1.25rem; font-weight: 800; text: none; text-transform: uppercase;
+    box-shadow: px 6px0 #1a1a1a; border: 3px solid #1a1a1a;
+    transition: box-shadow 0.15s, transform 0.15s; margin-top: 2rem;
+  }
+  .cta:hover { box-shadow: 3px 3px 0 #1aa1a; transform: translate(3px, 3px); }
+  .section { padding: clamp(3rem, vw, 6rem) 2rem; }
+  .section h2 { font-size: 2.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 3rem; }
+  .features {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;
+  }
+  .feature-card {
+    background: #fff; border: 3px solid #1a1a1a; padding: 2rem;
+    box-shadow: 6px 6px 0 #1a1a1a; transition: box-shadow 0.15, transform 0.15s;
+  }
+  .feature-card:hover { box-shadow: 3px 3px 0 #1a1a1a;: translate(3px, 3px); }
+  .feature-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem; text-transform: uppercase; }
+  .feature-card p { color: #555; line-height: 1.7; }
+  .pricing-grid { display: grid; grid-template-columns repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;  .price-card {
+    background: #fff; border: 3px solid #1a1a1a; padding: 2.5rem;
+    box-shadow: 6px 6px 0 #11a1a; text-align: center;
+  }
+  .price-card.featured { background: var(--cyan); }
+  .price-card h3 { font-size: 1.5rem; font-weight: 800; text-transform: uppercase }
+  .price-card .price { font-size: 3rem; font-weight: 900; margin: 1.5rem 0; }
+  .rainbow-bg {
+    background: linear-gradient(135deg, var(--yellow) 0%, var(--pink) 50%, var(--cyan) 100%);
+  }
+  .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .testimonial-card {
+    background: #fff; border: 3px solid #1a1a1a; padding: 2rem;
+    box-shadow: 6px 6px 0 #1a1a1a;
+  }
+  .testimonial-card p { font-size: 1.125rem; color: #333; margin-bottom: 1rem; font-style: italic; }
+  .testimonial-card cite font-weight: 800; text-transform: uppercase; }
+  footer {
+    background: #1a1a1a; color: #fff; padding: 3rem 2rem;
+    text-align: center; font-weight: 700; font-size: 0.875rem;
+    border-top: 6px solid var(--);
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="badge">NOW IN 50+ CITIES</div>
+  <h1>YOUR DOG'S NEW BEST FRIEND</h1  <p style="font-size:1.25rem;max-width:32rem;margin:1.5rem auto;color:#333">Verified walkers, real-time GPS tracking, and photo updates â all with $1M insurance. Download PawPal today.</p>
+  <a href="#" class="cta">GET THE APP</a>
+</section>
+
+<section class="section rainbow-bg">
+  <h2 style="text-align:center">EVERYTHING YOUR PUP NEEDS</h2>
+  <div class="features">
+    <div class="feature-card"><h3>REAL-TIME GPS</h3><p>Watch your dog's walk live on the map. Know exactly where they are, every step of the way. Peace of mind, delivered in real time.</p></div>
+    <div class="feature-card"><h3>PHOTO UPDATES</h3><p>Get snapshots of your pup having the time of their life â playing, sniffing, and wagging. Every walk comes with a gallery of memories.</p></div>
+    <div class="feature-card"><h3>VERIFIED WALKERS</h3><p>Every walker passes a rigorous background check, in-person interview, and reference verification. Only the best for your best friend.</p></div>
+    <div class="feature-card"><h3>$1M INSURANCE</h3><p>Full liability coverage included on every walk and pet sit. Because when it comes to your pet, there's no room for risk.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 style="text-align:center">SIMPLE PLANS, HAPPY TAILS</h2>
+  <div class="pricing-grid">
+    <div class="price-card"><h3>WALK STARTER</h3><div class="price">$15</div><p style="color:#555">Per 30-min walk. Great for quick potty breaks and fresh air. Includes GPS tracking and one photo update.</p></div>
+    <div class="price-card featured"><h3>PAW PASS</h3><div class="price">$99</div><p style="color:#333">10 walks per month. Save 34%. Priority booking, unlimited photo updates, and a monthly wellness report from your walker.</p></div>
+    <div class="price-card"><h3>PET SITTER</h3><div class="price">$45</div><p style="color:#555">Per 60-min visit. Perfect for overnight stays or extended care. Includes full insurance, GPS, and 5+ photo updates per visit.</p></div>
+  </div>
+</section>
+
+<section class="section" style="background: #fff;">
+  <h2 style="text-align:center">LOVED BY PET PARENTS</h2>
+  <div class="testimonials">
+    <div class="testimonial-card"><p>"PawPal changed our lives. My anxious rescue finally gets the exercise he needs, and I can see exactly where he is. The photos make my day!"</p><cite>â SARAH M., AUSTIN, TX</cite></div>
+    <div class="testimonial-card"><>"I was nervous about leaving my cat with a stranger. But the verified walker was incredible â professional, loving, and sent 10 photos. I'm a customer for life."</p><cite>â JAMES L., PORTLAND, OR</cite></div>
+    <div class="testimonial-card"><p>"The insurance gave me total peace of mind. When my dog slipped his harness, the walker handled it perfectly and PawPal covered everything. Unreal service."</p><cite>â PRIYA K., CHICAGO, IL</cite></div>
+  </div>
+</section>
+
+<footer>Â© 2025 PAWPAL INC. â YOUR DOG DESERVES THE BEST. DOWNLOAD NOW ON IOS AND ANDROID.</footer>
+</body>
+</html>
